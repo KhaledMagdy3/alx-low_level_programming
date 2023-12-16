@@ -2,26 +2,28 @@
 /**
  * main - Entry point
  *
- * numbers with , and space
+ * combination two num
  *
  * Return: Always 0 (Success)
  */
 
 int main(void)
 {
-	int n;
+	int n, m;
 
-	for (n = 0; n < 10; n++)
+	n = 0;
+	m = 1;
+	while(n <= 9 && m <= 9)
 	{
+	if(n != m)
+	{	
+	putchar('0' + m);
 	putchar('0' + n);
-	if (n < 9)
-	{
 	putchar(',');
 	putchar(' ');
 	}
+	continue;
 	}
-
-	putchar('\n');
 
 	return (0);
 }
