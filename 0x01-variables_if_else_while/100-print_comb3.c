@@ -11,19 +11,20 @@ int main(void)
 {
 	int n, m;
 
-	n = 0;
-	m = 1;
-	while(n <= 9 && m <= 9)
+	for (n = 0; n <= 9; n++)
 	{
-	if(n != m)
-	{	
-	putchar('0' + m);
+	for (m = n + 1; m <= 1; m++)
+	{
 	putchar('0' + n);
+	putchar('0' + m);
+	if (n < 8 || m < 9)
+	{
 	putchar(',');
 	putchar(' ');
 	}
-	continue;
 	}
+	}
+	putchar('\n');
 
 	return (0);
 }
