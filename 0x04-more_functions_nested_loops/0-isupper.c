@@ -20,6 +20,9 @@ int _isupper(int c)
 	{
 	u = 0;
 	}
-
+	else
+	{
+	u = 0;
+	}
 	return (u);
 }
