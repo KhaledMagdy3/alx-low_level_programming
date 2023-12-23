@@ -10,22 +10,22 @@
 int main(void)
 {
 	int i = 3;
-	long long int first = 1;
-	long long int second = 2;
-	long long int next = first + second;
+	long int first = 1;
+	long int second = 2;
+	long int next = first + second;
 
-	printf("%lld, ", first);
-	printf("%lld, ", second);
+	printf("%lu, ", first);
+	printf("%lu, ", second);
 
 	while (i <= 98)
 	{
 		if (i == 98)
 		{
-			printf("%lld\n", next);
+			printf("%lu\n", next);
 		}
 		else
 		{
-			printf("%lld, ", next);
+			printf("%lu, ", next);
 		}
 
 		first = second;
