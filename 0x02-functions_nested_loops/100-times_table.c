@@ -12,17 +12,20 @@
 void print_times_table(int n)
 {
 
-	int i, j, u, k, x;
+	int i, j, u, k, z, x;
 
 	for (i = 0; i <= n; i++)
 	{
 		for (j = 0; j <= n; j++)
 		{
+		if (n <= 15 && n >= 0)
+		{
 			u = i * j;
-			k = u / 10;
+			k = u / 100;
+			z = (u / 10) % 10;
 			x = u % 10;
 
-			if (k == 0)
+			if (j == 0)
 			{
 				if (j == 0)
 				{
@@ -49,6 +52,7 @@ void print_times_table(int n)
 			{
 				_putchar('\n');
 			}
+		}
 		}
 	}
 }
