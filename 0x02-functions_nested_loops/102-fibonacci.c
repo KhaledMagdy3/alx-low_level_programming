@@ -14,18 +14,18 @@ int main(void)
 	long int second = 2;
 	long int next = first + second;
 
-	printf("%d, ", first);
-	printf("%d, ", second);
+	printf("%ld, ", first);
+	printf("%ld, ", second);
 
 	while (i <= 50)
 	{
 		if (i == 50)
 		{
-			printf("%d \n", next);
+			printf("%ld \n", next);
 		}
 		else
 		{
-			printf("%d, ", next);
+			printf("%ld, ", next);
 		}
 
 		first = second;
