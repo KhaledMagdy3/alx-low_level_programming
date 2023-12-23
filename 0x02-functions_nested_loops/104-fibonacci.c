@@ -10,9 +10,9 @@
 int main(void)
 {
 	int i = 3;
-	long int first = 1;
-	long int second = 2;
-	long int next = first + second;
+	unsigned long int first = 1;
+	unsigned long int second = 2;
+	unsigned long int next = first + second;
 
 	printf("%lu, ", first);
 	printf("%lu, ", second);
