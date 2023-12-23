@@ -14,18 +14,18 @@ int main(void)
 	long int second = 2;
 	long int next = first + second;
 
-	printf("%ld, ", first);
-	printf("%ld, ", second);
+	printf("%lu, ", first);
+	printf("%lu, ", second);
 
 	while (i <= 98)
 	{
 		if (i == 98)
 		{
-			printf("%ld\n", next);
+			printf("%lu\n", next);
 		}
 		else
 		{
-			printf("%ld, ", next);
+			printf("%lu, ", next);
 		}
 
 		first = second;
