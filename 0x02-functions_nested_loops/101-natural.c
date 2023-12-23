@@ -22,5 +22,5 @@ int main(void)
 		}
 	}
 
-	prntf("%d\n", sum);
+	printf("%d\n", sum);
 }
