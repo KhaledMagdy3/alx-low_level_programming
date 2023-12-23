@@ -21,7 +21,7 @@ int main(void)
 	{
 		if (i == 50)
 		{
-			printf("%ld \n", next);
+			printf("%ld\n", next);
 		}
 		else
 		{
