@@ -21,15 +21,12 @@ void print_diagonal(int n)
 	{
 	for (i = 1; i <= n; i++)
 	{
-		for (j = 1; j <= n; j++)
+		for (j = 1; j <= (i - 1); j++)
 		{
-			for (k = 1; k <= (n - 1); k++)
-			{
-				_putchar(' ');
-			}
+			_putchar(' ');
+		}
 			_putchar('\\');
 			_putchar('\n');
-		}
 	}
 	}
 }
