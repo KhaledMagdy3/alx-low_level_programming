@@ -20,7 +20,7 @@ char *_strncat(char *dest, char *src, int n)
 
 	while (dest[i] != '\0')
 	{
-		i++
+		i++;
 	}
 
 	while (j < n)
