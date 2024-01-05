@@ -11,20 +11,20 @@
 
 char *leet(char *a)
 {
-	int i;
+	int i, j;
+	char sml[] = {'a', 'e', 'o', 't', 'l'};
+	char cap[] = {'A', 'E', 'O', 'T', 'L'};
+	char num[] = {'4', '3', '0', '7', '1'};
 
 	for (i = 0; a[i] != '\0'; i++)
 	{
-		while (a[i] == 'a' || a[i] == 'A')
-			a[i] = '4';
-		while (a[i] == 'e' || a[i] == 'E')
-			a[i] = '3';
-		while (a[i] == 'o' || a[i] == 'O')
-			a[i] = '0';
-		while (a[i] == 't' || a[i] == 'T')
-			a[i] = '7';
-		while (a[i] == 'l' || a[i] == 'L')
-			a[i] = '1';
+		for (j = 0; j < 5; j++)
+		{
+			if (a[i] == sml[j] || a[i] == cap[j])
+			{
+				a[i] = num[j];
+			}
+		}
 	}
 
 	return (a);
