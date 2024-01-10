@@ -6,12 +6,12 @@
  *
  *@s: char
  *
- * Return: void
+ * Return: int
  */
 
 int _strlen_recursion(char *s)
 {
-	int i, x, y;
+	int i;
 
 	i = 1;
 
@@ -21,10 +21,5 @@ int _strlen_recursion(char *s)
 		_strlen_recursion(s + 1);
 	}
 	else
-	{
-		x = i / 10;
-		y = i % 10;
-		_putchar(x + '0');
-		_putchar(y + '0');
-	}
+		return (i);
 }
