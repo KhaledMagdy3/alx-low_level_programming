@@ -3,7 +3,6 @@
 
 /**
  * _sqrt_recursion_guess - function helper
- * _sqrt_recursion - function that returns the natural square root
  *
  * @n: int
  * @i: int
@@ -28,6 +27,14 @@ int _sqrt_recursion_guess(int n, int i)
 		return (-1);
 	}
 }
+
+/**
+ * _sqrt_recursion - function that returns the natural square root
+ *
+ * @n: int
+ *
+ * Return: int
+ */
 
 int _sqrt_recursion(int n)
 {
