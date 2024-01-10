@@ -36,7 +36,7 @@ int is_prime_number_guess(int n, int i)
  * Return: int
  */
 
-int is_prime_number(int n);
+int is_prime_number(int n)
 {
 	return (is_prime_number_guess(n, 2));
 }
