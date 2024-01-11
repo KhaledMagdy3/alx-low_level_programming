@@ -39,6 +39,7 @@ int is_palindrome_help(char *s, int start, int end)
 	{
 		return (is_palindrome_help(s, start + 1, end - 1));
 	}
+	return (0);
 }
 
 /**
