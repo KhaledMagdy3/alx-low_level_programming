@@ -20,12 +20,14 @@ int main(int argc, char *argv[])
 		printf("error");
 		return (1);
 	}
-
-	for (i = 1; i < argc; i++)
+	else
 	{
-		x = x * atoi(argv[i]);
-	}
-	printf("%i\n", x);
+		for (i = 1; i < argc; i++)
+		{
+			x = x * atoi(argv[i]);
+		}
+		printf("%i\n", x);
 
-	return (0);
+		return (0);
+	}
 }
