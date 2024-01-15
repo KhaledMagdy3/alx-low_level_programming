@@ -3,6 +3,26 @@
 #include "main.h"
 
 /**
+ * len - length of string
+ *
+ * @s: char
+ *
+ * Return: int
+*/
+
+int len(char *s)
+{
+	int i;
+
+	i = 1;
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
+
+/**
  * str_concat - function that concatenates two strings
  *
  * @s1: char
@@ -16,17 +36,16 @@ char *str_concat(char *s1, char *s2)
 	char *array;
 	int i, x, y, z;
 
-	i = 1;
-	while (s1[i] != '\0')
+	if (s1 == NULL)
 	{
-		i++;
+		s1 = "";
 	}
-	y = 1;
-	while (s2[y] != '\0')
+	if (s2 == NULL)
 	{
-		y++;
+		s2 = "";
 	}
-
+	i = len(s1);
+	y = len(s2);
 	array = (char *)malloc((i + y + 1) * sizeof(char));
 
 	for (x = 0; x < i; x++)
