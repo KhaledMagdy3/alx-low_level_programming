@@ -27,22 +27,14 @@ char *str_concat(char *s1, char *s2)
 		y++;
 	}
 
-	array = (char *)malloc((i + y) * sizeof(char));
+	array = (char *)malloc((i + y + 1) * sizeof(char));
 
 	for (x = 0; x < i; x++)
 	{
-		if (array == NULL)
-		{
-			return (NULL);
-		}
 		array[x] = s1[x];
 	}
 	for (z = 0; z < (i + y); z++)
 	{
-		if (array == NULL)
-		{
-			return (NULL);
-		}
 		array[x + z] = s2[z];
 	}
 
