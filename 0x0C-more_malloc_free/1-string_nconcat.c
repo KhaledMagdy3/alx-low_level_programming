@@ -37,6 +37,15 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int  i, j, x;
 	char *m;
 
+	if (s1 == NULL)
+	{
+		s1 = "";
+	}
+	if (s2 == NULL)
+	{
+		s2 = "";
+	}
+
 	i = len(s1);
 	m = (char *)malloc((i * sizeof(char)) + ((n + 1) * sizeof(char)));
 
