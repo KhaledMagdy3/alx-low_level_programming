@@ -16,6 +16,11 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	unsigned int *m;
 	unsigned int i;
 
+	if ((nmemb == 0) || (size == 0))
+	{
+		return (NULL);
+	}
+
 	m = (unsigned int *)malloc(nmemb * size);
 
 	if ((m == NULL) || (nmemb == 0) || (size == 0))
