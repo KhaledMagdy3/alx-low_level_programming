@@ -64,10 +64,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		m[j] = s1[j];
 	}
-	for (x = i; x < (i + n); x++)
-	{
-		m[x] = s2[x - i];
-	}
+	for (x = i, j = 0; j < n && s2[j] != '\0'; x++, j++)
+    {
+        m[x] = s2[j];
+    }
 	m[x] = '\0';
 	return (m);
 }
