@@ -26,7 +26,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 		if ((separator == NULL) || (i == (n - 1)))
 		{
-			printf("%d\n", x);
+			printf("%d", x);
 		}
 		else if (i < (n - 1))
 		{
@@ -34,6 +34,7 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		}
 	}
 
-	va_end(var);
+	printf("\n");
 
+	va_end(var);
 }
