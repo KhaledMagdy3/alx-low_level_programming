@@ -1,4 +1,4 @@
-#include "main.h"
+#include "lists.h"
 
 /**
  * print_list - function that prints all the elements of a list_t list.
@@ -12,28 +12,25 @@
 
 size_t print_list(const list_t *h)
 {
-	unsigned int i = 0;
-	list_t *ptr = NULL;
+	int i = 0;
 
-	ptr = h;
-	ptr->len = 0;
-	while (ptr != NULL)
+	if (h == NULL)
 	{
-		if (ptr->str == NULL)
+		return (0);
+	}
+
+	while (h != NULL)
+	{
+		if (h->str == NULL)
 		{
-			printf("[0] (nill)");
+			printf("[0] (nill)\n");
 		}
 		else
 		{
-			while (*(ptr->str) != '\0')
-			{
-				i++;
-			}
-
-			printf("[%d] (%s)\n", i, ptr->str);
+			printf("[%d] (%s)\n", h->len, h->str);
 		}
-		(ptr->len)++;
-		ptr = ptr->next;
+		i++;
+		h = h->next;
 	}
-	return (ptr->len);
+	return (i);
 }
