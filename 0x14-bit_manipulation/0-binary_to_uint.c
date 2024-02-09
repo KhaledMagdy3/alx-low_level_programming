@@ -43,33 +43,23 @@ unsigned int powr(int base, int pw)
 
 unsigned int binary_to_uint(const char *b)
 {
+	unsigned int num;
 	int i;
-	unsigned int sum;
-
-	i = 0;
-	sum = 0;
+	int len;
 
 	if (b == NULL)
 		return (0);
 
-	while (b[i] != '\0')
-	{
-		i++;
-	}
+	len = strlen(b);
 
-	i--;
-	while (i >= 0)
+	num = 0;
+
+	for (i = 0; i < len; i++)
 	{
-		if (!((b[i] == '0') || (b[i] == '1')))
+		if (!(b[i] == '0' || b[i] == '1'))
 			return (0);
 
-		if (b[i] == '1')
-		{
-			sum = sum + (powr(2, i));
-		}
-
-		i--;
+		num = num + ((b[i] - '0') * (powr(2, (len - i - 1))));
 	}
-
-	return (sum);
+	return (num);
 }
