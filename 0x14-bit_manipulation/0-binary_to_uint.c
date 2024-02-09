@@ -1,21 +1,37 @@
 #include "main.h"
 
 /**
-*unsigned int _pow(unsigned int base, int pw)
-*{
-*	unsigned int result;
-*
-*	if (pw == 0)
-*		return (1);
-*	else if (pw == 1)
-*		return (base);
-*	else
-*	{
-*		while (pw >= 0)
-*	}
-*
-}
+ * powr - function to math calc power
+ *
+ * @base: int (the base)
+ * @pw: int (the power)
+ *
+ * Return: unsigned int
 */
+
+unsigned int powr(int base, int pw)
+{
+	unsigned int result;
+
+	if (pw == 0)
+	{
+		return (1);
+	}
+
+	else if (pw == 1)
+	{
+		return (base);
+	}
+
+	result = 1;
+	while (pw > 0)
+	{
+		result = result * base;
+		pw--;
+	}
+	return (result);
+}
+
 
 /**
  * binary_to_uint - function converts a binary number to an unsigned int
@@ -32,6 +48,10 @@ unsigned int binary_to_uint(const char *b)
 
 	i = 0;
 	sum = 0;
+
+	if (b == NULL)
+		return (0);
+
 	while (b[i] != '\0')
 	{
 		i++;
@@ -40,14 +60,14 @@ unsigned int binary_to_uint(const char *b)
 	i--;
 	while (i >= 0)
 	{
+		if (!((b[i] == '0') || (b[i] == '1')))
+			return (0);
+
 		if (b[i] == '1')
 		{
-			sum = sum + ((b[i] - '0') * pow(2, i));
+			sum = sum + (powr(2, i));
 		}
-		else if (b[i] != '0')
-		{
-			return (0);
-		}
+
 		i--;
 	}
 
