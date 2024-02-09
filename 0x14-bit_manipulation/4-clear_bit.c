@@ -45,7 +45,7 @@ int clear_bit(unsigned long int *n, unsigned int index)
 	if (index > 32)
 		return (-1);
 
-	*n = *n ^ (powr(2, index));
+	*n = *n & ~(powr(2, index));
 
 	return (1);
 }
