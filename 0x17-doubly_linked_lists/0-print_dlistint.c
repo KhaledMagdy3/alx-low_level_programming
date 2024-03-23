@@ -8,13 +8,14 @@ include "lists.h"
 
 size_t print_dlistint(const dlistint_t *h)
 {
+	const dlistint_t *temp = h;
 	int size = 0;
 
-	while (h != NULL)
+	while (temp != NULL)
 	{
-		printf("%d", h->n);
+		printf("%d", temp->n);
 		size++;
-		h = h->next;
+		temp = temp->next;
 	}
 
 	return (size);
